@@ -351,7 +351,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative bg-[var(--color-primary)] text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] via-[var(--color-primary-light)] to-[var(--color-primary)]" />
-        <div className="relative max-w-7xl mx-auto px-6 py-40 md:py-52 grid md:grid-cols-[3fr_2fr] gap-16 items-start">
+        <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-52 grid md:grid-cols-[3fr_2fr] gap-16 items-start">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               You probably didn&apos;t start a business to do admin until
@@ -368,7 +368,7 @@ export default function Home() {
               <PrimaryButton large>Let&apos;s Talk</PrimaryButton>
             </div>
           </div>
-          <div className="flex items-start justify-center md:-mt-2">
+          <div className="hidden md:flex items-start justify-center md:-mt-2">
             <Image
               src="/hero-image.svg"
               alt="AWC — AI solutions for your business"

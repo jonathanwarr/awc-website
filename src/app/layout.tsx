@@ -16,9 +16,24 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amwarr.com"),
   title: "AWC — AI Consulting That Works",
   description:
     "AI coaching and strategic assessments for individuals, teams, and organizations. 700+ implementations. Process-first. Outcome-focused.",
+  openGraph: {
+    title: "AWC — AI Consulting That Works",
+    description:
+      "AI coaching and strategic assessments for individuals, teams, and organizations. 700+ implementations. Process-first. Outcome-focused.",
+    siteName: "AWC",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AWC — AI Consulting That Works",
+    description:
+      "AI coaching and strategic assessments for individuals, teams, and organizations. 700+ implementations. Process-first. Outcome-focused.",
+  },
 };
 
 export default function RootLayout({

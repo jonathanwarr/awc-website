@@ -7,7 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleRight,
   faArrowRight,
-  faCheck,
+  faBars,
+
   faChevronDown,
   faChevronLeft,
   faChevronRight,
@@ -16,7 +17,150 @@ import {
   faLockOpen,
   faQuoteLeft,
   faWrench,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+
+/* ─── Smooth Scroll Helper ─── */
+
+function smoothScrollTo(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+/* ─── Scroll To Top Button ─── */
+
+function ScrollToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setVisible(window.scrollY > 500);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      aria-label="Scroll to top"
+      className={`fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-[var(--color-cyan)] text-white flex items-center justify-center shadow-lg transition-all cursor-pointer hover:bg-[var(--color-cyan-dark)] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+    >
+      <FontAwesomeIcon icon={faChevronUp} className="w-4 h-4" />
+    </button>
+  );
+}
+
+/* ─── Navigation ─── */
+
+const navLinks = [
+  { label: "Our Approach", id: "approach" },
+  { label: "Services", id: "services" },
+];
+
+function NavBar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  function handleNav(id: string) {
+    setMobileOpen(false);
+    smoothScrollTo(id);
+  }
+
+  return (
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-[var(--color-stone-200)]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="text-2xl font-bold font-[family-name:var(--font-heading)] text-[var(--color-primary)]"
+        >
+          AWC
+        </a>
+
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--color-stone-600)]">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => smoothScrollTo(link.id)}
+              className="hover:text-[var(--color-primary)] transition-colors cursor-pointer"
+            >
+              {link.label}
+            </button>
+          ))}
+          <Link
+            href="/pricing"
+            className="hover:text-[var(--color-primary)] transition-colors"
+          >
+            Pricing
+          </Link>
+          <button
+            onClick={() => smoothScrollTo("faq")}
+            className="hover:text-[var(--color-primary)] transition-colors cursor-pointer"
+          >
+            FAQ
+          </button>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <a
+            href="https://calendly.com/jonathan-amwarr/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-[var(--color-cyan)] text-white font-semibold px-5 py-2.5 text-sm transition-colors hover:bg-[var(--color-cyan-dark)]"
+          >
+            Let&apos;s Talk
+          </a>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            className="md:hidden w-10 h-10 flex items-center justify-center text-[var(--color-primary)] cursor-pointer"
+          >
+            <FontAwesomeIcon
+              icon={mobileOpen ? faXmark : faBars}
+              className="w-5 h-5"
+            />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-[var(--color-stone-200)] bg-white px-6 py-4 space-y-3">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => handleNav(link.id)}
+              className="block w-full text-left text-base font-medium text-[var(--color-stone-600)] hover:text-[var(--color-primary)] transition-colors cursor-pointer"
+            >
+              {link.label}
+            </button>
+          ))}
+          <Link
+            href="/pricing"
+            onClick={() => setMobileOpen(false)}
+            className="block text-base font-medium text-[var(--color-stone-600)] hover:text-[var(--color-primary)] transition-colors"
+          >
+            Pricing
+          </Link>
+          <button
+            onClick={() => handleNav("faq")}
+            className="block w-full text-left text-base font-medium text-[var(--color-stone-600)] hover:text-[var(--color-primary)] transition-colors cursor-pointer"
+          >
+            FAQ
+          </button>
+        </div>
+      )}
+    </nav>
+  );
+}
 
 /* ─── Reusable Components ─── */
 
@@ -202,50 +346,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* ── Navigation ── */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-[var(--color-stone-200)]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <a
-            href="#"
-            className="text-2xl font-bold font-[family-name:var(--font-heading)] text-[var(--color-primary)]"
-          >
-            AWC
-          </a>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--color-stone-600)]">
-            <a
-              href="#approach"
-              className="hover:text-[var(--color-primary)] transition-colors"
-            >
-              Our Approach
-            </a>
-            <a
-              href="#services"
-              className="hover:text-[var(--color-primary)] transition-colors"
-            >
-              Services
-            </a>
-            <Link
-              href="/pricing"
-              className="hover:text-[var(--color-primary)] transition-colors"
-            >
-              Pricing
-            </Link>
-            <a
-              href="#faq"
-              className="hover:text-[var(--color-primary)] transition-colors"
-            >
-              FAQ
-            </a>
-          </div>
-          <a
-            href="https://calendly.com/jonathan-amwarr/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg bg-[var(--color-cyan)] text-white font-semibold px-5 py-2.5 text-sm transition-colors hover:bg-[var(--color-cyan-dark)]"
-          >
-            Let&apos;s Talk
-          </a>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* ── Hero ── */}
       <section className="relative bg-[var(--color-primary)] text-white overflow-hidden">
@@ -517,8 +618,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-[var(--color-primary)]">
                 Jonathan
-                <span className="ml-2 text-sm font-normal text-[var(--color-stone-400)]">Partner, Strategy &amp; Operations</span>
               </h3>
+              <p className="text-sm text-[var(--color-stone-400)]">Partner, Strategy &amp; Operations</p>
               <p className="mt-3 text-[var(--color-stone-600)] leading-relaxed">
                 Brings 12 years in technology as animplementation expert. He has
                 spent his career designing and implementing seamless operational solutions for clients. He is the reason
@@ -537,8 +638,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-[var(--color-primary)]">
                 Negar
-                <span className="ml-2 text-sm font-normal text-[var(--color-stone-400)]">Partner, Product &amp; Technology</span>
               </h3>
+              <p className="text-sm text-[var(--color-stone-400)]">Partner, Product &amp; Technology</p>
               <p className="mt-3 text-[var(--color-stone-600)] leading-relaxed">
                 Brings 10 years in technology as a product manager. She has
                 spent her career figuring out what customers actually need and
@@ -622,18 +723,21 @@ export default function Home() {
             <p className="mt-1 text-sm">Solutions that work.</p>
           </div>
           <div className="flex items-center gap-6 text-sm">
-            <a
-              href="#services"
-              className="hover:text-white transition-colors"
+            <button
+              onClick={() => smoothScrollTo("services")}
+              className="hover:text-white transition-colors cursor-pointer"
             >
               Services
-            </a>
+            </button>
             <Link href="/pricing" className="hover:text-white transition-colors">
               Pricing
             </Link>
-            <a href="#faq" className="hover:text-white transition-colors">
+            <button
+              onClick={() => smoothScrollTo("faq")}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
               FAQ
-            </a>
+            </button>
             <a
               href="mailto:jonathan@amwarr.com"
               className="hover:text-white transition-colors"
@@ -646,6 +750,8 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      <ScrollToTop />
     </div>
   );
 }

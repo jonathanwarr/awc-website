@@ -5,14 +5,17 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
+  faBars,
   faCheck,
   faGraduationCap,
   faLockOpen,
   faWrench,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="flex flex-col">
@@ -51,15 +54,61 @@ export default function PricingPage() {
               FAQ
             </Link>
           </div>
-          <a
-            href="https://calendly.com/jonathan-amwarr/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg bg-[var(--color-cyan)] text-white font-semibold px-5 py-2.5 text-sm transition-colors hover:bg-[var(--color-cyan-dark)]"
-          >
-            Let&apos;s Talk
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://calendly.com/jonathan-amwarr/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-[var(--color-cyan)] text-white font-semibold px-5 py-2.5 text-sm transition-colors hover:bg-[var(--color-cyan-dark)]"
+            >
+              Let&apos;s Talk
+            </a>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              className="md:hidden w-10 h-10 flex items-center justify-center text-[var(--color-primary)] cursor-pointer"
+            >
+              <FontAwesomeIcon
+                icon={mobileOpen ? faXmark : faBars}
+                className="w-5 h-5"
+              />
+            </button>
+          </div>
         </div>
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="md:hidden border-t border-[var(--color-stone-200)] bg-white px-6 py-4 space-y-3">
+            <Link
+              href="/#approach"
+              onClick={() => setMobileOpen(false)}
+              className="block text-base font-medium text-[var(--color-stone-600)] hover:text-[var(--color-primary)] transition-colors"
+            >
+              Our Approach
+            </Link>
+            <Link
+              href="/#services"
+              onClick={() => setMobileOpen(false)}
+              className="block text-base font-medium text-[var(--color-stone-600)] hover:text-[var(--color-primary)] transition-colors"
+            >
+              Services
+            </Link>
+            <Link
+              href="/pricing"
+              onClick={() => setMobileOpen(false)}
+              className="block text-base font-medium text-[var(--color-primary)] font-semibold"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/#faq"
+              onClick={() => setMobileOpen(false)}
+              className="block text-base font-medium text-[var(--color-stone-600)] hover:text-[var(--color-primary)] transition-colors"
+            >
+              FAQ
+            </Link>
+          </div>
+        )}
       </nav>
 
       {/* ── Page Header ── */}

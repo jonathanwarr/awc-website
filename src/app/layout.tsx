@@ -15,24 +15,25 @@ const lexend = Lexend({
   display: "swap",
 });
 
+const title = "AWC — AI Solutions for Small Business";
+const description =
+  "Cut the busywork. We help small businesses build practical AI tools that give your team back their time.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://amwarr.com"),
-  title: "AWC — AI Consulting That Works",
-  description:
-    "AI coaching and strategic assessments for individuals, teams, and organizations. 700+ implementations. Process-first. Outcome-focused.",
+  title,
+  description,
   openGraph: {
-    title: "AWC — AI Consulting That Works",
-    description:
-      "AI coaching and strategic assessments for individuals, teams, and organizations. 700+ implementations. Process-first. Outcome-focused.",
+    title,
+    description,
     siteName: "AWC",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AWC — AI Consulting That Works",
-    description:
-      "AI coaching and strategic assessments for individuals, teams, and organizations. 700+ implementations. Process-first. Outcome-focused.",
+    title,
+    description,
   },
 };
 

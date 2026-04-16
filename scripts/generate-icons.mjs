@@ -23,8 +23,6 @@ await sharp(logoSvg, { density: 400 })
 console.log("wrote src/app/apple-icon.png");
 
 const ogBg = "#FFFFFF";
-const ogFg = "#1D283D";
-const tagline = "Solutions that work";
 
 const logoInner = logoSvg
   .toString()
@@ -34,10 +32,9 @@ const logoInner = logoSvg
 
 const ogSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
   <rect width="1200" height="630" fill="${ogBg}"/>
-  <g transform="translate(420, 95) scale(0.7)" fill="none">
+  <g transform="translate(344, 59) scale(1.0)" fill="none">
     ${logoInner}
   </g>
-  <text x="600" y="540" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-style="italic" fill="${ogFg}">${tagline}</text>
 </svg>`;
 
 await sharp(Buffer.from(ogSvg), { density: 150 })

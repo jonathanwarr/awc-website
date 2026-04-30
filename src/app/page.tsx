@@ -142,14 +142,6 @@ function NavBar() {
 
 /* ─── Reusable Components ─── */
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="h6 inline-block text-[var(--color-primary)] mb-3">
-      {children}
-    </span>
-  );
-}
-
 function PrimaryButton({
   children,
   href = "https://calendly.com/jonathan-amwarr/30min",
@@ -321,12 +313,11 @@ export default function Home() {
       <section id="problem" className="bg-[var(--color-bg-secondary)] py-16 sm:py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <SectionLabel>The Reality</SectionLabel>
             <h2 className="text-[var(--color-text-dark)]">
-              The Second Shift
+              Today&apos;s Problem
             </h2>
             <h5 className="mt-6 text-[var(--color-text-light)] leading-relaxed">
-              The work that doesn&apos;t need your expertise, but takes your time.
+              The second shift. All the work that doesn&apos;t need your expertise, but takes up your evening and weekends.
             </h5>
           </div>
           <div className="mt-12 md:mt-14 grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
@@ -385,13 +376,12 @@ export default function Home() {
             </div>
             <div>
               <div className="text-center md:text-left">
-                <SectionLabel>How We Help</SectionLabel>
                 <h2 className="text-[var(--color-text-dark)]">
-                  The Usual Suspects
+                  How We Help
                 </h2>
-                <p className="body-4 mt-4 text-[var(--color-text-light)]">
+                <h5 className="mt-2 text-[var(--color-text-light)]">
                   Common tasks that manage to affect everyone&apos;s clock
-                </p>
+                </h5>
               </div>
               <ul className="mt-8 md:mt-10 grid grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-3 text-[var(--color-text-light)] justify-center md:justify-start w-fit mx-auto md:mx-0 text-left">
                 {[
@@ -426,9 +416,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center md:text-left">
-              <SectionLabel>Our Approach</SectionLabel>
               <h2 className="text-[var(--color-text-dark)]">
-                Our Approach is Simple
+                Our Approach
               </h2>
               <h5 className="mt-2 text-[var(--color-text-light)]">
                 Listen. Learn. Plan. Build.
@@ -482,12 +471,11 @@ export default function Home() {
       <section id="why-us" className="bg-[var(--color-bg-primary)] py-16 sm:py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <SectionLabel>Why Us</SectionLabel>
             <h2 className="text-[var(--color-text-dark)]">
-              Experience Matters
+              Why Us
             </h2>
             <h5 className="mt-2 text-[var(--color-text-light)]">
-              700+ Implementations. Zero Guesswork.
+              Experience Matters. 700+ Implementations, Zero Guesswork.
             </h5>
           </div>
           <div className="mt-12 md:mt-14 grid md:grid-cols-2 gap-6 md:gap-8">
@@ -573,10 +561,12 @@ Most small business AI projects fail one of two ways. They build the wrong thing
       <section className="bg-[var(--color-bg-secondary)] py-16 sm:py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-12 md:mb-14">
-            <SectionLabel>Testimonials</SectionLabel>
             <h2 className="text-[var(--color-text-dark)]">
-              Don&apos;t take our word for it
+              Testimonials
             </h2>
+            <h5 className="mt-2 text-[var(--color-text-light)]">
+              Don&apos;t take our word for it
+            </h5>
           </div>
           <TestimonialCarousel />
         </div>

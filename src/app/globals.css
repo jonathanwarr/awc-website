@@ -1,38 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #1e293b;
-  --color-primary-light: #334155;
-  --color-primary-muted: #64748b;
-  --color-white: #ffffff;
-  --color-cream: #fafaf9;
-  --color-cyan: #0e7490;
-  --color-cyan-dark: #155e75;
-  --color-teal-light: #0d9488;
-  --color-stone-100: #f5f5f4;
-  --color-stone-200: #e7e5e4;
-  --color-stone-300: #d6d3d1;
-  --color-stone-400: #a8a29e;
-  --color-stone-500: #78716c;
-  --color-stone-600: #57534e;
-  --color-gold: #ca8a04;
-  --color-gold-dark: #a16207;
-  --color-gold-light: #f59e0b;
+  --color-primary: #D5A790;
+  --color-primary-hover: #CE987E;
+  --color-accent-light: #E0D6D1;
+  --color-text-dark: #504A49;
+  --color-text-light: #6B6461;
+  --color-text-muted: #A3968F;
+  --color-bg-primary: #FEFDFB;
+  --color-bg-secondary: #FCFAF6;
+  --color-bg-default: #FFFFFF;
+  --color-primary-surface: #FAF7F0;
+  --color-secondary-surface: #F7F3E9;
+  --color-border-default: #F7F4F2;
+  --color-border-strong: #ECE4DF;
+  --color-success: #80FFAA;
+  --color-warning: #FFDF80;
+  --color-error: #FF809F;
 }
 
 @theme inline {
-  --font-heading: "Lora", serif;
-  --font-body: "Lexend", sans-serif;
-  --color-background: var(--color-white);
-  --color-foreground: var(--color-primary);
+  --font-heading: var(--font-lora), Georgia, serif;
+  --font-body: var(--font-lato), system-ui, sans-serif;
+  --color-background: var(--color-bg-primary);
+  --color-foreground: var(--color-text-dark);
 }
 
 body {
-  background: var(--color-white);
-  color: var(--color-primary);
+  background: var(--color-bg-primary);
+  color: var(--color-text-dark);
   font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* ── Headings ── */
+
+/* Heading 1 — Hero Banner (Lora, Regular, fluid 36→64px) */
+h1, .h1 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(36px, 7vw, 64px);
+  line-height: 1.1;
 }
+
+/* Heading 2 — Section Headings (Lora, Regular, fluid 30→50px) */
+h2, .h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(30px, 5.5vw, 50px);
+  line-height: 1.15;
+}
+
+/* Heading 3 — Large Support Heading: Cards, Models, CTAs, etc. (Lora, Regular, fluid 24→32px) */
+h3, .h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(24px, 3.5vw, 32px);
+  line-height: 1.2;
+}
+
+/* Heading 4 — Small Support Heading: Cards, Models, CTAs, etc. (Lora, Regular, fluid 20→26px) */
+h4, .h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(20px, 2.8vw, 26px);
+  line-height: 1.25;
+}
+
+/* Heading 5 — Subheading (Lato, Light, fluid 18→26px) */
+h5, .h5 {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(18px, 2.8vw, 26px);
+  line-height: 1.4;
+}
+
+/* Heading 6 — Heading Eyebrows (Lato, Bold, 12px) */
+h6, .h6 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Body ── */
+
+/* Body 1 — Regular Text (Lato, Regular, 16px) */
+.body-1 { font-family: var(--font-body); font-weight: 400; font-size: 16px; }
+
+/* Body 2 — Small Text (Lato, Regular, 14px) */
+.body-2 { font-family: var(--font-body); font-weight: 400; font-size: 14px; }
+
+/* Body 3 — Extra Small Text (Lato, Regular, 12px) */
+.body-3 { font-family: var(--font-body); font-weight: 400; font-size: 12px; }
+
+/* Body 4 — Lead/Subhead Text (Lato, Light, fluid 16→20px) */
+.body-4 { font-family: var(--font-body); font-weight: 300; font-size: clamp(16px, 2.2vw, 20px); }
+
+/* ── Serif accents ── */
+
+/* Serif 1 — Italic accent line (Lora, Regular, 14px) */
+.serif-1 { font-family: var(--font-heading); font-weight: 400; font-size: 14px; }
+
+/* ── Buttons ── */
+
+/* Button 1 — Large Button (Lato, Bold, fluid 16→20px) */
+.btn-1 { font-family: var(--font-body); font-weight: 700; font-size: clamp(16px, 2.2vw, 20px); }
+
+/* Button 2 — Small Button (Lato, Bold, 16px) */
+.btn-2 { font-family: var(--font-body); font-weight: 700; font-size: 16px; }

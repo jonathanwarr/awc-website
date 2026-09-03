@@ -33,19 +33,19 @@ export default function PricingPage() {
               href="/#how-we-help"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Approach
+              Solutions
             </Link>
             <Link
-              href="/#why-us"
+              href="/#approach"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Team
+              About
             </Link>
             <Link
-              href="/#services"
+              href="/#problem"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Services
+              Problems
             </Link>
             <Link
               href="/pricing"
@@ -56,7 +56,7 @@ export default function PricingPage() {
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
             <a
-              href="https://calendly.com/jonathan-amwarr/30min"
+              href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex btn-2 rounded-lg bg-[var(--color-primary)] text-white px-4 py-2 sm:px-5 sm:py-2.5 transition-colors hover:bg-[var(--color-primary-hover)] whitespace-nowrap"
@@ -84,21 +84,21 @@ export default function PricingPage() {
               onClick={() => setMobileOpen(false)}
               className="block body-1 text-[var(--color-text-light)] hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Approach
+              Solutions
             </Link>
             <Link
-              href="/#why-us"
+              href="/#approach"
               onClick={() => setMobileOpen(false)}
               className="block body-1 text-[var(--color-text-light)] hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Team
+              About
             </Link>
             <Link
-              href="/#services"
+              href="/#problem"
               onClick={() => setMobileOpen(false)}
               className="block body-1 text-[var(--color-text-light)] hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Services
+              Problems
             </Link>
             <Link
               href="/pricing"
@@ -108,7 +108,7 @@ export default function PricingPage() {
               Pricing
             </Link>
             <a
-              href="https://calendly.com/jonathan-amwarr/30min"
+              href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
@@ -167,7 +167,7 @@ export default function PricingPage() {
                   </p>
                 </div>
                 <a
-                  href="https://calendly.com/jonathan-amwarr/30min"
+                  href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--color-primary)] text-white px-6 py-3 transition-colors hover:bg-[var(--color-primary-hover)] shrink-0 whitespace-nowrap"
@@ -275,7 +275,7 @@ export default function PricingPage() {
               </ul>
               <div className="mt-8 pt-6 border-t border-[var(--color-border-default)] h-[68px] flex items-center">
                 <a
-                  href="https://calendly.com/jonathan-amwarr/30min"
+                  href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-2 inline-flex items-center gap-2 text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors"
@@ -326,7 +326,7 @@ export default function PricingPage() {
               </ul>
               <div className="mt-8 pt-6 border-t border-[var(--color-border-default)] h-[68px] flex items-center">
                 <a
-                  href="https://calendly.com/jonathan-amwarr/30min"
+                  href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-2 inline-flex items-center gap-2 rounded-lg bg-[var(--color-primary)] text-white px-6 py-3 transition-colors hover:bg-[var(--color-primary-hover)]"
@@ -388,7 +388,7 @@ export default function PricingPage() {
               </ul>
               <div className="mt-8 pt-6 border-t border-[var(--color-border-default)] h-[68px] flex items-center">
                 <a
-                  href="https://calendly.com/jonathan-amwarr/30min"
+                  href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-2 inline-flex items-center gap-2 text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors"
@@ -525,7 +525,7 @@ export default function PricingPage() {
           </p>
           <div className="mt-8 md:mt-10">
             <a
-              href="https://calendly.com/jonathan-amwarr/30min"
+              href="https://calendly.com/jonathan-amwarr/coffee-and-connect"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-1 inline-flex items-center gap-2 rounded-lg bg-[var(--color-primary)] text-white px-6 py-3 sm:px-8 sm:py-4 transition-colors hover:bg-[var(--color-primary-hover)]"
@@ -544,26 +544,26 @@ export default function PricingPage() {
             <span className="h4 text-[var(--color-text-dark)]">
               AWC
             </span>
-            <p className="mt-1 body-2">Solutions that work.</p>
+            <p className="mt-1 body-2">Scale customer success to meet your sales growth.</p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 body-2">
             <Link
               href="/#how-we-help"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Approach
+              Solutions
             </Link>
             <Link
-              href="/#why-us"
+              href="/#approach"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Team
+              About
             </Link>
             <Link
-              href="/#services"
+              href="/#problem"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
-              Services
+              Problems
             </Link>
             <Link href="/pricing" className="hover:text-[var(--color-text-dark)] transition-colors">
               Pricing

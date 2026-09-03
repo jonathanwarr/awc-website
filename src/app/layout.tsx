@@ -1,25 +1,27 @@
 import type { Metadata } from "next";
-import { Lora, Lato } from "next/font/google";
+import { Newsreader, Lato } from "next/font/google";
 import "@/lib/fontawesome";
 import "./globals.css";
 
-const lora = Lora({
-  variable: "--font-lora",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: "variable",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
   display: "swap",
 });
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
-const title = "AWC — AI Solutions for Small Business";
+const title = "AWC — Scale Customer Success to Meet Sales";
 const description =
-  "Cut the busywork. We help small businesses build practical AI tools that give your team back their time.";
+  "AWC helps B2B SaaS startups scale customer success to meet growing sales: onboarding, customer success operations and AI enablement, from sales to success to renewal.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://amwarr.com"),
@@ -47,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${lora.variable} ${lato.variable} h-full antialiased`}
+      className={`${newsreader.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

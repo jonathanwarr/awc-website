@@ -1,0 +1,70 @@
+/* ── Prospect preview pages ──
+   Everything here is scoped to .bs-root so nothing leaks into the AWC site. */
+
+/* AWC's globals.css styles h1–h6 with unlayered element selectors, which
+   would beat Tailwind utilities. Roll those properties back to the layered
+   (Tailwind) values so the preview headings follow their own classes. */
+.bs-root :is(h1, h2, h3, h4, h5, h6) {
+  font-family: revert-layer;
+  font-weight: revert-layer;
+  font-size: revert-layer;
+  line-height: revert-layer;
+  letter-spacing: revert-layer;
+  text-transform: revert-layer;
+}
+
+html:has(.bs-root) {
+  scroll-behavior: smooth;
+}
+
+/* ── Beetle Spa, Concept A (Workshop) ── */
+
+.bs-a {
+  --a-bg: #F7F6F3;
+  --a-surface: #FFFFFF;
+  --a-surface2: #ECEAE5;
+  --a-text: #16181B;
+  --a-muted: #4A4E54;
+  --a-subtle: #62666C;
+  --a-line: #E2E0DB;
+  --a-line2: #CFCCC6;
+  --a-accent: #8F6210;
+}
+
+.bs-a[data-theme="dark"] {
+  --a-bg: #121416;
+  --a-surface: #181B1E;
+  --a-surface2: #1E2125;
+  --a-text: #F2F0EB;
+  --a-muted: #B9BCC0;
+  --a-subtle: #8C9096;
+  --a-line: #2A2E33;
+  --a-line2: #3A3F45;
+  --a-accent: #E8B04B;
+  color-scheme: dark;
+}
+
+/* Match the page edges (overscroll, short viewports) to the active theme. */
+body:has(.bs-a) { background: #F7F6F3; }
+body:has(.bs-a[data-theme="dark"]) { background: #121416; }
+html:has(.bs-a[data-theme="dark"]) { color-scheme: dark; }
+
+/* Theme toggle shows the moon in light mode and the sun in dark mode. */
+.bs-a .bs-icon-sun { display: none; }
+.bs-a[data-theme="dark"] .bs-icon-sun { display: block; }
+.bs-a[data-theme="dark"] .bs-icon-moon { display: none; }
+
+/* ── Beetle Spa, Concept B (Technical Index) ── */
+
+.bs-b {
+  --b-accent: #2140A8;
+}
+
+body:has(.bs-b) { background: #EEEDEA; }
+
+/* Link hovers sit in the base layer so per-link utilities still win,
+   as the inline styles do in the design files. */
+@layer base {
+  .bs-a a:hover { opacity: 0.8; }
+  .bs-b a:hover { color: var(--b-accent); }
+}

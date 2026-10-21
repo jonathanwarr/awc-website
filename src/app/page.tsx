@@ -223,31 +223,31 @@ const problems = [
   },
   {
     title: "You don't want to get it wrong",
-    body: "What happens to your customer info? Is it worth the cost? Will your team even use it? Fair questions, and they deserve straight answers before you spend a dollar.",
+    body: "Is your customer info safe? Is it worth the cost? Will your team use it? You deserve straight answers before spending a dollar.",
   },
 ];
 
 const services = [
   {
-    title: "Getting comfortable with AI",
+    title: "Get comfortable with AI",
     tagline: "Learn what it can do for you, in plain English.",
-    body: "We sit down with you and your team, look at how your days usually go, and show you where AI could help. No jargon, no nonsense. You'll leave knowing what's worth trying and what isn't.",
+    body: "We look at how your days usually go and show you where AI could help. No jargon, no nonsense. You'll leave knowing what's worth trying and what isn't.",
     example:
       "A dental office learns to draft appointment reminders and answer common patient questions in minutes, instead of an hour at the end of the day.",
     image: "/cs-onboarding.jpg",
     alt: "Two people shaking hands across a desk",
   },
   {
-    title: "Taking work off your plate",
+    title: "Take work off your plate",
     tagline: "Hand off the tasks that eat up your week.",
     body: "We find the one or two jobs that take the most time and build something simple to handle them. Your team stays in charge. The tool just does the legwork.",
     example:
-      "A customer describes what's wrong with their car on an auto shop's website. A simple assistant writes it up, sends a rough quote, and lets them know the team will be in touch. The shop reviews it, approves it, and books them in.",
+      "A customer describes their car trouble online. A simple assistant writes it up with a rough quote, and the shop reviews it and books them in.",
     image: "/cs-operations.jpg",
     alt: "A person on a video call at a wooden desk",
   },
   {
-    title: "Simplifying how things get done",
+    title: "Simplify routine tasks",
     tagline: "Make the everyday stuff easier.",
     body: "Sometimes the answer isn't a new tool. We look at a process from start to finish, find where it gets stuck, and make it simple. We'll share where AI helps, and also where it doesn't.",
     example:
@@ -260,17 +260,17 @@ const services = [
 const stages = [
   {
     title: "Listen",
-    body: "We spend time with you and your team to understand how things run today: what you use, what slows you down, and what you wish was easier. Then we show you where the biggest time savers are.",
+    body: "We learn how things run today: what you use, what slows you down, and what you wish was easier. Then we show you the biggest time savers.",
     deliverable: "A simple plan, in plain language, of what to fix first.",
   },
   {
     title: "Build",
-    body: "We put the plan into action, built around how your team already works. You'll see it come together and have a say along the way.",
+    body: "We put the plan into action, built around how your team already works. You'll see it come together and have a say every step of the way.",
     deliverable: "A working solution your team is using.",
   },
   {
     title: "Teach",
-    body: "We make sure your team is comfortable with what we built and knows how to keep it going. We'll also show you how to spot the next thing worth trying.",
+    body: "We make sure your team is comfortable with what we built and can keep it going, then show you how to spot the next thing worth trying.",
     deliverable: "Training, easy how-to guides, and the confidence to keep going.",
   },
 ];
@@ -533,7 +533,7 @@ export default function Home() {
       {/* ── Final CTA ── */}
       <section id="contact" className="bg-[var(--color-accent-light)] text-[var(--color-text-dark)] py-16 sm:py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center">
-          <h2>Not sure yet? That&apos;s what the first call is for.</h2>
+          <h2>Not sure where to start? Let&apos;s chat.</h2>
           <p className="mt-6 text-lg md:text-xl text-[var(--color-text-light)] max-w-2xl mx-auto leading-relaxed">
             Book a free 30-minute chat. Tell us how your week usually goes, and we&apos;ll share a few ways AI could make it easier. No pitch, no pressure, and no tech knowledge needed.
           </p>

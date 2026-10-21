@@ -19,9 +19,9 @@ const lato = Lato({
   display: "swap",
 });
 
-const title = "AWC — Scale Customer Success to Meet Sales";
+const title = "AWC | Friendly AI help for local businesses";
 const description =
-  "AWC helps B2B SaaS startups scale customer success to meet growing sales: onboarding, customer success operations and AI enablement, from sales to success to renewal.";
+  "AWC helps local businesses get comfortable with AI and use it to cut the busywork. Straight answers in plain English, including where AI won't help.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://amwarr.com"),

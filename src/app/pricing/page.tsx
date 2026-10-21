@@ -36,7 +36,7 @@ export default function PricingPage() {
               Solutions
             </Link>
             <Link
-              href="/#approach"
+              href="/#how-it-works"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
               About
@@ -87,7 +87,7 @@ export default function PricingPage() {
               Solutions
             </Link>
             <Link
-              href="/#approach"
+              href="/#how-it-works"
               onClick={() => setMobileOpen(false)}
               className="block body-1 text-[var(--color-text-light)] hover:text-[var(--color-text-dark)] transition-colors"
             >
@@ -554,7 +554,7 @@ export default function PricingPage() {
               Solutions
             </Link>
             <Link
-              href="/#approach"
+              href="/#how-it-works"
               className="hover:text-[var(--color-text-dark)] transition-colors"
             >
               About

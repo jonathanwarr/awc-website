@@ -49,9 +49,9 @@ function ScrollToTop() {
 /* ─── Navigation ─── */
 
 const navLinks = [
-  { label: "Problems", id: "problem" },
-  { label: "Solutions", id: "how-we-help" },
-  { label: "About", id: "approach" },
+  { label: "How we help", id: "how-we-help" },
+  { label: "How it works", id: "how-it-works" },
+  { label: "About", id: "testimonials" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -182,7 +182,7 @@ function PrimaryButton({
   );
 }
 
-/* ─── Hero backdrop: sales vs. customer success curves ─── */
+/* ─── Hero backdrop: curves ─── */
 
 function HeroCurves() {
   return (
@@ -214,73 +214,64 @@ function HeroCurves() {
 
 const problems = [
   {
-    title: "Onboarding blocks the pipeline",
-    body: "New customers wait weeks to go live. Signed deals stall before they deliver value, and the backlog grows with every deal you close.",
+    title: "You're not sure where it fits",
+    body: "Everyone says AI will change everything, but nobody shows you what that looks like for your business and your day-to-day work.",
   },
   {
-    title: "Relationships slip to support",
-    body: "Nobody owns the account, so check-ins turn into tickets. Renewals and expansion get handled reactively, if at all.",
+    title: "The busywork keeps piling up",
+    body: "Emails, scheduling, quotes, paperwork. It all has to get done, and it's eating the hours you'd rather spend with customers, or at home.",
   },
   {
-    title: "AI gets bolted on, fast",
-    body: "Your team reaches for AI tools to stop the bleeding. Without a working process underneath, they automate the chaos instead of fixing it.",
+    title: "You don't want to get it wrong",
+    body: "What happens to your customer info? Is it worth the cost? Will your team even use it? Fair questions, and they deserve straight answers before you spend a dollar.",
   },
 ];
 
 const services = [
   {
-    title: "Scaling Customer Onboarding",
-    tagline: "Turn signed deals into live customers, fast.",
-    body: "We map your implementation journey end to end: the workflows, tools and measures behind it. We find the bottlenecks and process gaps, then pin down the three numbers that matter: throughput, capacity and time to value. So onboarding keeps up with the deals you close.",
-    points: [
-      "Implementation journey & bottlenecks",
-      "Throughput, capacity & time to value",
-      "Findings report & implementation blueprint",
-    ],
+    title: "Getting comfortable with AI",
+    tagline: "Learn what it can do for you, in plain English.",
+    body: "We sit down with you and your team, look at how your days usually go, and show you where AI could help. No jargon, no nonsense. You'll leave knowing what's worth trying and what isn't.",
+    example:
+      "A dental office learns to draft appointment reminders and answer common patient questions in minutes, instead of an hour at the end of the day.",
     image: "/cs-onboarding.jpg",
     alt: "Two people shaking hands across a desk",
   },
   {
-    title: "Scaling Customer Success Operations",
-    tagline: "Run the post-sales engine on purpose.",
-    body: "We get under the hood of how you manage customers after the sale: what gets measured and how, how accounts are covered, and how adoption, renewals and expansion actually happen. So you know which accounts are healthy, which are at risk, and where the next dollar of revenue is coming from.",
-    points: [
-      "Proactive success & account management",
-      "Health scoring, renewals & expansion",
-      "Adoption, value realization & advocacy",
-    ],
+    title: "Taking work off your plate",
+    tagline: "Hand off the tasks that eat up your week.",
+    body: "We find the one or two jobs that take the most time and build something simple to handle them. Your team stays in charge. The tool just does the legwork.",
+    example:
+      "A customer describes what's wrong with their car on an auto shop's website. A simple assistant writes it up, sends a rough quote, and lets them know the team will be in touch. The shop reviews it, approves it, and books them in.",
     image: "/cs-operations.jpg",
-    alt: "An account manager on a video call with a customer",
+    alt: "A person on a video call at a wooden desk",
   },
   {
-    title: "AI Enablement for Customer Success",
-    tagline: "Adopt AI where it earns its place.",
-    body: "We assess your AI readiness: how your team uses AI today, how fluent they are, and how the company's AI goals, governance and training line up. You get an AI fluency program: a blueprint for putting AI to work in customer success, plus the materials to keep adoption growing.",
-    points: [
-      "AI readiness & team fluency assessment",
-      "Goals, governance & training review",
-      "AI fluency program & enablement materials",
-    ],
+    title: "Simplifying how things get done",
+    tagline: "Make the everyday stuff easier.",
+    body: "Sometimes the answer isn't a new tool. We look at a process from start to finish, find where it gets stuck, and make it simple. We'll share where AI helps, and also where it doesn't.",
+    example:
+      "A landscaping company goes from quotes scattered across texts, emails and notebooks to one simple system where nothing slips through the cracks.",
     image: "/cs-ai-enablement.jpg",
-    alt: "A laptop and phone open to a customer conversation",
+    alt: "A person using a laptop and phone at a table",
   },
 ];
 
 const stages = [
   {
-    title: "Analyze",
-    body: "We work alongside your team to understand how the function runs today: the workflows, the tools, the people and the numbers. We find where sales is outpacing success and where the highest-leverage fixes are.",
-    deliverable: "Findings report and implementation blueprint",
+    title: "Listen",
+    body: "We spend time with you and your team to understand how things run today: what you use, what slows you down, and what you wish was easier. Then we show you where the biggest time savers are.",
+    deliverable: "A simple plan, in plain language, of what to fix first.",
   },
   {
-    title: "Implement",
-    body: "We put the blueprint into practice: the processes, playbooks, metrics and systems that let the function keep pace with sales. Built around how your team already works, with your team in the room.",
-    deliverable: "The blueprint, implemented and running",
+    title: "Build",
+    body: "We put the plan into action, built around how your team already works. You'll see it come together and have a say along the way.",
+    deliverable: "A working solution your team is using.",
   },
   {
-    title: "Enable",
-    body: "We make sure it sticks. Your team gets the training, materials and operating rhythm to own what was built, so adoption keeps growing after we step back.",
-    deliverable: "Enablement program and materials for your team",
+    title: "Teach",
+    body: "We make sure your team is comfortable with what we built and knows how to keep it going. We'll also show you how to spot the next thing worth trying.",
+    deliverable: "Training, easy how-to guides, and the confidence to keep going.",
   },
 ];
 
@@ -395,13 +386,9 @@ export default function Home() {
         <div className="relative flex-1 flex items-center">
           <div className="w-full max-w-7xl mx-auto px-8 sm:px-14 lg:px-24 pt-28 pb-16 md:pt-40 md:pb-24">
             <div className="max-w-[900px]">
-              <h1>Scale customer success to meet your sales growth</h1>
+              <h1>Let&apos;s figure out what AI can do for you.</h1>
               <p className="body-4 mt-5 leading-[1.55] text-[var(--color-text-light)]">
-                Helping B2B companies get customers from
-                <br className="hidden md:inline" />{" "}
-                <strong className="font-bold text-[var(--color-text-dark)]">sales</strong> to{" "}
-                <strong className="font-bold text-[var(--color-text-dark)]">success</strong> to{" "}
-                <strong className="font-bold text-[var(--color-text-dark)]">renewal</strong>.
+                We&apos;ll start with one small thing that costs you time and money every week and make it easier. Then we&apos;ll show you how to spot other ways it can help your business.
               </p>
               <div className="mt-10 md:mt-12">
                 <PrimaryButton large>Let&apos;s Talk</PrimaryButton>
@@ -416,10 +403,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-[var(--color-text-dark)]">
-              Sales is ramping. Success is stretched.
+              AI is everywhere. Now what?
             </h2>
             <h5 className="mt-6 text-[var(--color-text-light)] leading-normal">
-              When your company hits its growth stage, the first lever you pull is sales. Then sales ramps up, and customer success becomes the bottleneck.
+              You&apos;ve heard it can save you time and money, but you don&apos;t want to waste either finding out.
             </h5>
           </div>
           {/* Cards share one row grid (subgrid) so titles, dividers and body copy line up */}
@@ -444,12 +431,12 @@ export default function Home() {
       <section id="how-we-help" className="bg-[var(--color-bg-primary)] py-16 sm:py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-[var(--color-text-dark)]">How We Help</h2>
+            <h2 className="text-[var(--color-text-dark)]">How we help</h2>
             <h5 className="mt-2 text-[var(--color-text-light)]">
-              Three services. Each one built to keep pace with sales.
+              We&apos;re here to make sure you don&apos;t waste either.
             </h5>
           </div>
-          {/* Columns share one row grid (subgrid): image, title, tagline, body and list line up */}
+          {/* Columns share one row grid (subgrid): image, title, tagline, body and example line up */}
           <div className="mt-12 md:mt-14 flex flex-col gap-14 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-0 max-w-[1120px] mx-auto">
             {services.map((service) => (
               <div
@@ -473,34 +460,27 @@ export default function Home() {
                 <p className="mt-4 text-[var(--color-text-light)] leading-relaxed">
                   {service.body}
                 </p>
-                <ul className="mt-5 md:mt-6 md:self-start flex flex-col gap-3 text-[17px] text-[var(--color-text-light)]">
-                  {service.points.map((point) => (
-                    <li key={point} className="flex items-center gap-3">
-                      <span
-                        aria-hidden
-                        className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] shrink-0"
-                      />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-5 md:mt-6 md:self-start border-l-2 border-[var(--color-primary)] pl-4 text-[17px] text-[var(--color-text-light)] leading-relaxed">
+                  <strong className="font-bold text-[var(--color-text-dark)]">For example:</strong>{" "}
+                  {service.example}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Our Approach ── */}
-      <section id="approach" className="bg-[var(--color-bg-default)] py-16 sm:py-20 md:py-28">
+      {/* ── How It Works ── */}
+      <section id="how-it-works" className="bg-[var(--color-bg-default)] py-16 sm:py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-[var(--color-text-dark)]">Our Approach</h2>
+              <h2 className="text-[var(--color-text-dark)]">How it works</h2>
               <h5 className="mt-2 text-[var(--color-text-light)]">
-                Analyze. Implement. Enable.
+                Listen. Build. Teach.
               </h5>
               <p className="mt-6 text-[var(--color-text-light)] leading-relaxed">
-                Every service runs through the same three milestones, and each one ends with a deliverable you can use on its own. Start at whichever stage fits where you are, and stop when you have what you need.
+                Every project follows the same three steps, and each one gives you something useful on its own. Start wherever makes sense for you, and stop when you have what you need.
               </p>
             </div>
 
@@ -523,7 +503,7 @@ export default function Home() {
                     {stage.body}
                   </p>
                   <hr className="my-5 md:my-6 border-0 border-t border-[var(--color-primary)] md:self-end" />
-                  <h6 className="text-[var(--color-text-muted)]">Deliverable</h6>
+                  <h6 className="text-[var(--color-text-muted)]">What you get</h6>
                   <p className="mt-1.5 text-[var(--color-text-dark)]">
                     {stage.deliverable}
                   </p>
@@ -531,7 +511,7 @@ export default function Home() {
               ))}
             </div>
             <p className="serif-1 mt-6 md:mt-8 text-center text-[var(--color-text-muted)]">
-              Every stage is an entry point and an exit point. Take one, or all three.
+              Every step is a place to start or a place to stop. Take one, or all three.
             </p>
           </div>
         </div>
@@ -543,7 +523,7 @@ export default function Home() {
           <div className="text-center mb-10 md:mb-14">
             <h2 className="text-[var(--color-text-dark)]">Why AWC</h2>
             <h5 className="mt-2 text-[var(--color-text-light)]">
-              700+ implementations. Don&apos;t take our word for it.
+              We&apos;ve helped 700+ teams get set up on new software. Don&apos;t just take our word for it.
             </h5>
           </div>
           <TestimonialCarousel />
@@ -553,13 +533,13 @@ export default function Home() {
       {/* ── Final CTA ── */}
       <section id="contact" className="bg-[var(--color-accent-light)] text-[var(--color-text-dark)] py-16 sm:py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center">
-          <h2>Ready to scale success to meet sales?</h2>
+          <h2>Not sure yet? That&apos;s what the first call is for.</h2>
           <p className="mt-6 text-lg md:text-xl text-[var(--color-text-light)] max-w-2xl mx-auto leading-relaxed">
-            Book a free 30-minute call. We&apos;ll talk about where sales is outpacing success, what&apos;s realistic to fix first, and whether we&apos;re the right fit. No pitch, no obligation.
+            Book a free 30-minute chat. Tell us how your week usually goes, and we&apos;ll share a few ways AI could make it easier. No pitch, no pressure, and no tech knowledge needed.
           </p>
           <div className="mt-8 md:mt-10">
             <PrimaryButton large tone="hover">
-              Book Your Free Call
+              Book a free chat
             </PrimaryButton>
           </div>
         </div>
@@ -571,7 +551,7 @@ export default function Home() {
           <div className="text-center md:text-left">
             <span className="h4 text-[var(--color-text-dark)]">AWC</span>
             <p className="mt-1 body-2">
-              Scale customer success to meet your sales growth.
+              Let&apos;s figure out what AI can do for you.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 body-2">
